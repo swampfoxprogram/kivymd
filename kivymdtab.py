@@ -14,7 +14,7 @@ ScreenManager:
     BoxLayout:
         orientation:'vertical'
         MDToolbar:
-            title: 'xDoramming'
+            title: 'swampfoxprogram'
         MDTabs:
             id: tabs
             
@@ -28,16 +28,13 @@ ScreenManager:
 <Tab1>:
     MDLabel:
         id:label1
-        text:"xDoramming1" #hello
+        text:"swampfox1" #hello
         halign:"left" 
 <Tab2>:
-    MDCard:
-        size_hint: None, None
-        size: "280dp", "180dp"
-        pos_hint: {"center_x": .5, "center_y": .5}
-        elevation:14
-        Image:
-            source:"cakes.jpg"                         
+    MDLabel:
+        id:label1
+        text:"swampfox2" #hello
+        halign:"left"                     
     '''
 
 
