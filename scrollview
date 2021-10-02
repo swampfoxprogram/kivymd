@@ -1,0 +1,67 @@
+from kivymd.app import MDApp
+from kivy.core.window import Window
+from kivy.lang.builder import Builder
+from kivy.uix.scrollview import ScrollView
+
+#builder
+kv = """
+
+MDScreen:
+    md_bg_color: 0,0,1,.3
+
+    MDBoxLayout:
+        orientation: "vertical"
+        
+
+        ScrollView:
+            MDList:
+                MDBoxLayout:
+                    orientation:'vertical'
+                    size_hint_y:None
+                    height:'300dp'
+          
+                    MDBoxLayout:
+                        md_bg_color: 1,1,1,.6
+                        MDLabel:
+                            halign:'center'
+                            text:'scrollview'
+                    Widget:
+                        size_hint_y:.1
+                               
+                    MDBoxLayout:
+                        md_bg_color: 0,0,0,.6
+
+                        MDLabel:
+                            halign:'center'
+                            text:'scrollview'
+                    Widget:
+                        size_hint_y:.1                            
+                    MDBoxLayout:
+                        md_bg_color: 0,0,1,.6
+                        MDLabel:
+                            halign:'center'
+                            text:'scrollview'
+                    Widget:
+                        size_hint_y:.1                            
+                    MDBoxLayout:
+                        md_bg_color: 0,1,0,.6
+                        MDLabel:
+                            halign:'center'
+                            text:'prasad'
+                    Widget:
+                        size_hint_y:.1                            
+    """
+
+
+# screen size
+Window.size =(360, 640)
+
+#main class
+class MainApp(MDApp):
+    def build(self):
+        self.pop =Builder.load_string(kv)
+        return self.pop
+        
+
+
+MainApp().run()   
