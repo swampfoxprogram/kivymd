@@ -51,7 +51,7 @@ class DemoApp(MDApp):
         screen.add_widget(self.help_str)
         return screen
     def data(self):
-        print(self.help_str.get_screen('screen1').ids.input.text)
+        print(self.help_str.get_screen('screen1').ids.input.text)  ####     TAKING USER INPUT   ####
         
         
 
